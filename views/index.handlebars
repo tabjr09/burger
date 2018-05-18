@@ -1,39 +1,47 @@
-<h1>Burgers</h1>
+<h1>Tasy Burgers</h1>
 
 <h2>Burgers that are not devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/main devoured=true}}
+
+<div class="row">
+  <div class="col-lg-6">
+  {{#each burgerdata}}
+    {{#unless this.devoured}}
+      <pre>{{this.burger_name}}</pre>
     {{/unless}}
-  {{/each}}
-</ul>
+  {{/each}} 
+  </div>
+</div>
+
 
 <h2>Burgers that are devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}dd
-      {{> burgers/main devoured=false}}
 
+<div class="row">
+  <div class="col-lg-6">
+  {{#each burgerdata}}
+    {{#if this.devoured}}
+      <pre>{{this.burger_name}}</pre>
     {{/if}}
-  {{/each}}
-</ul>
+  {{/each}} 
+  
+  </div>
+</div>
+
 
 <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="bg">Burger Name:</label>
-    <input type="text" id="bg" name="name">
+    <label for="bn">Burger Name:</label>
+    <input type="text" id="bn" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="slee">Devoured?</label><br>
+  {{!-- <div class="form-group">
+    <label for="devoured">Devoured?</label><br>
     <input type="radio" name="devoured" value="1" checked> Devoured!<br>
     <input type="radio" name="devoured" value="0"> Available
-  </div>
+  </div> --}}
 
   <button type="submit">Add Burger</button>
 </form>
