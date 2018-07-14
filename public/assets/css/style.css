@@ -1,0 +1,24 @@
+.burger-li {
+  padding: 5px;
+  margin: 5px;
+  background:lightgray;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.burger-col {
+  margin: 5px;
+  padding: 5px;
+}
